@@ -21,7 +21,7 @@ while (cadena!==null && (cadena=="" || cadena.split(" ").length!=3)){
 if (cadena!=null){
    const aNomApe=cadena.split(" ");
    const usuario=`${aNomApe[0].charAt(0)}${aNomApe[1].slice(0,3)}${aNomApe[2].slice(-3)}`;
-   document.writeln(`El nombre es ${aNomApe.at(0)} y el primer apellido es ${aNomApe[1]} y el segundo apellido es ${aNomApe.at(2)}`);
-   document.writeln(`El usuario es ${usuario}`)
+   document.body.innerHTML+=(`El nombre es ${aNomApe.at(0)} y el primer apellido es ${aNomApe[1]} y el segundo apellido es ${aNomApe.at(2)}`);
+   document.body.innerHTML+=(`El usuario es ${usuario}`)
    //crear usuario
 }
