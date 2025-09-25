@@ -22,22 +22,22 @@ if (numDato !== null) {
   );
 }
 
-document.write(`<h1>Ejemplo del Objeto Number en JavaScript</h1>`);
+document.body.innerHTML+=(`<h1>Ejemplo del Objeto Number en JavaScript</h1>`);
 
 // Usando toFixed() para formatear el número a un número específico de decimales
-document.writeln(`<strong>Original:</strong> ${numeroEjemplo}<br>`);
-document.writeln(`<strong>toFixed(2):</strong> ${numeroEjemplo.toFixed(2)}<br>`);
-document.writeln(`<strong>toFixed(4):</strong> ${numeroEjemplo.toFixed(4)}<br><br>`);
+document.body.innerHTML+=(`<strong>Original:</strong> ${numeroEjemplo}<br>`);
+document.body.innerHTML+=(`<strong>toFixed(2):</strong> ${numeroEjemplo.toFixed(2)}<br>`);
+document.body.innerHTML+=(`<strong>toFixed(4):</strong> ${numeroEjemplo.toFixed(4)}<br><br>`);
 
 // Usando toPrecision() para formatear el número a una precisión específica
-document.writeln(`<strong>toPrecision(5):</strong> ${numeroEjemplo.toPrecision(5)}<br>`);
-document.writeln(`<strong>toPrecision(2):</strong> ${numeroEjemplo.toPrecision(2)}<br><br>`);
+document.body.innerHTML+=(`<strong>toPrecision(5):</strong> ${numeroEjemplo.toPrecision(5)}<br>`);
+document.body.innerHTML+=(`<strong>toPrecision(2):</strong> ${numeroEjemplo.toPrecision(2)}<br><br>`);
 
 // Usando toString() para convertir el número a una cadena
-document.writeln(`<strong>toString():</strong> ${numeroEjemplo.toString()}<br>`);
-document.writeln(`<strong>toString(2):</strong> ${numeroEjemplo.toString(2)} (en binario)<br>`);
-document.writeln(`<strong>toString(16):</strong> ${numeroEjemplo.toString(16)} (en hexadecimal)<br><br>`);
+document.body.innerHTML+=(`<strong>toString():</strong> ${numeroEjemplo.toString()}<br>`);
+document.body.innerHTML+=(`<strong>toString(2):</strong> ${numeroEjemplo.toString(2)} (en binario)<br>`);
+document.body.innerHTML+=(`<strong>toString(16):</strong> ${numeroEjemplo.toString(16)} (en hexadecimal)<br><br>`);
 
 // Mostrando las propiedades MAX_VALUE y MIN_VALUE
-document.writeln(`<strong>Number.MAX_VALUE:</strong> ${Number.MAX_VALUE}<br>`);
-document.writeln(`<strong>Number.MIN_VALUE:</strong> ${Number.MIN_VALUE}<br>`);
+document.body.innerHTML+=(`<strong>Number.MAX_VALUE:</strong> ${Number.MAX_VALUE}<br>`);
+document.body.innerHTML+=(`<strong>Number.MIN_VALUE:</strong> ${Number.MIN_VALUE}<br>`);
