@@ -88,9 +88,10 @@ try {
   alumno2.edad = 18;
 
   //Hacemos uso del método toString para mostrar la información del alumno en el document. 
-  document.write(alumno2.toString())
+  document.body.innerHTML+=alumno2.toString();
   
 } catch (error) {
     console.log(error);
 }
+
 
