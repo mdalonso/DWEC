@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Constraint Validation API</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="../../../../assets/css/spinner.css">
+   
+</head>
+
+<body>
+    <h1>Ejemplo Constraint Validation API</h1>
+
+    <form id="formulario" novalidate>
+        
+        <!-- INPUT: Nombre -->
+        <div class="campo">
+            <label>Nombre (*):</label><br>
+            <input type="text" id="nombre" required minlength="3">
+            <span class="error" id="err-nombre"></span>
+        </div>
+        <!-- INPUT: Edad -->
+        <div class="campo">
+            <label>Edad (*):</label><br>
+            <input type="number" id="edad" required min="18">
+            <span class="error" id="err-edad"></span>
+        </div>
+
+        <!-- RADIO: Género -->
+        <div class="campo">
+            <p>Género (*):</p>
+            <input type="radio" name="genero" id="gen-h" value="hombre" required>
+            <label for="gen-h">Hombre</label>
+
+            <input type="radio" name="genero" id="gen-m" value="mujer">
+            <label for="gen-m">Mujer</label>
+
+            <span class="error" id="err-genero"></span>
+        </div>
+
+        <!-- CHECKBOX: Aficiones -->
+        <div class="campo">
+            <p>Aficiones (elige al menos una):</p>
+
+            <input type="checkbox" name="aficiones" id="af-deporte" value="deporte">
+            <label for="af-deporte">Deporte</label>
+
+            <input type="checkbox" name="aficiones" id="af-lectura" value="lectura">
+            <label for="af-lectura">Lectura</label>
+
+            <input type="checkbox" name="aficiones" id="af-musica" value="musica">
+            <label for="af-musica">Música</label>
+
+            <span class="error" id="err-aficiones"></span>
+        </div>
+
+        <!-- SELECT: País -->
+        <div class="campo">
+            <label for="pais">País (*):</label><br>
+            <select id="pais" required>
+                <option value="">-- Selecciona un país --</option>
+                <option value="es">España</option>
+                <option value="fr">Francia</option>
+                <option value="it">Italia</option>
+            </select>
+            <span class="error" id="err-pais"></span>
+        </div>
+
+        <button type="submit">Enviar</button>
+        <input type="text" id="recaptcha" name="recapatcha_response">
+        <div id="spinner" class="sk-circle" style="display:none">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+          </div>
+          <!--Se inserta un span para mostrar un mensaje mientras se están enviando los datos-->
+        <span class="exito" id="exito"></span>
+    </form>
+
+
+    <script src="./js/app.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcwqLgqAAAAAMrlM0fXwM8NfkkQXSgSa1ONwR1k"></script>
+</body>
+</html>
