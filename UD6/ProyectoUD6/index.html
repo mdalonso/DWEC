@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/sweetalert2.css">
+
+</head>
+<body>
+    <!-- Comentario insertado luego por JS -->
+    <header>
+        <h1>Gestor de Tareas</h1>
+    </header>
+
+    <main class="container">
+        <section class="add-task">
+            <input type="text" id="taskInput" placeholder="Nueva tarea...">
+            <button id="addBtn">Añadir</button>
+        </section>
+
+        <section>
+            <ul id="taskList" class="task-list">
+                <li class="empty-msg">No hay tareas. ¡Añade una! 😊</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="./js/prep_app.js"></script>
+    <script src="./assets/sweetalert2.all.min.js"></script>
+</body>
+</html>
