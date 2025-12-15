@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Dinámico</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tablero Kanban</h1>
+        <div class="controls">
+            <input type="text" id="taskInput" placeholder="Nueva tarea...">
+            <button id="addBtn">Añadir</button>
+        </div>
+    </header>
+
+    <div class="board">
+        <div class="column" id="todo">
+            <h2>Por hacer</h2>
+            </div>
+
+        <div class="column" id="doing">
+            <h2>En progreso</h2>
+        </div>
+
+        <div class="column" id="done">
+            <h2>Terminado</h2>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
