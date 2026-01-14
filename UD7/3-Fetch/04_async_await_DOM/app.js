@@ -9,7 +9,8 @@ const mostrarProv=async() =>{
         //fetch se resuelve en un objeto response
         //La función se detiene hasta que la solicitud se resuelve.
         //En este caso se realiza una solicitud GET al servidor.
-        const response= await fetch("https://raw.githubusercontent.com/IagoLast/pselect/master/data/provincias.json")
+        const response= await fetch("https://raw.githubusercontent.com/IagoLast/pselect/master/data/provincias.json");
+        console.log(response);
         
         if(!response.ok || response.status !=200) {
             //El throw activa el reject de la promesa de la función async
@@ -18,6 +19,7 @@ const mostrarProv=async() =>{
         //La función se detiene hasta que obtenemos los datos generados por la solicitud fetch al servidor
         //Como en el ejemplo anterior, los datos parseados se recogen en un array de objetos JS.
         const data=await response.json();
+        console.log(data);
         //Se ordena el array alfabéticamente de forma ascendente por el nombre de la provincia        
         data.sort((a, b) => {
             return a.nm.localeCompare(b.nm)
@@ -25,7 +27,13 @@ const mostrarProv=async() =>{
         //Se recorre el array para cargar las provincias en el select correspondiente
         data.forEach(element => {
             const option=document.createElement("option");
-            option.setAttribute("id", element.id);//Le incorporamos un atributo que nos facilite la gestión
+            //Atributos personalizados.
+            //Los atributos personalizados se suelen denominar data-xxx y nos sirven para añadir información a los elementos html.
+            //A todos los atributos data- podemos accederlos mediante la propiedad dataset del elemento html
+            //teniendo en cuenta que dataset transforma el identificador a camelCamel case.
+            //Por ejemplo, el atributo personalizado data-id-user podría ser accedido desde código como dataset.idUser.
+            
+            option.setAttribute("data-id", element.id);//Le incorporamos un atributo que nos facilite la gestión
             option.innerText=element.nm;
             document.querySelector("#provincias").append(option);
           }); 
@@ -35,7 +43,7 @@ const mostrarProv=async() =>{
         document.querySelector("#provincias").addEventListener("change", function () {
               const provincias=document.querySelector("#provincias")
               if (provincias.selectedIndex!=0){
-                Swal.fire("El CP es " +provincias.options[provincias.selectedIndex].getAttribute("id"));
+                Swal.fire("El CP es " +provincias.options[provincias.selectedIndex].getAttribute("data-id"));
               }
           })
         
