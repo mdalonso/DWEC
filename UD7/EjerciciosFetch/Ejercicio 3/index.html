@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Usuario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../assets/librerias/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/librerias/fontawesome/css/fontawesome.min.css">
+</head>
+<body>
+
+    <section>
+        <div class="container">
+            <h3>Formulario de Usuario</h3>
+            <form id="userForm">
+                <div class="mb-3">
+                    <label for="idInput" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="idInput" placeholder="ID" required>
+                </div>
+                <div class="mb-3">
+                    <label for="userNameInput" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="userNameInput" placeholder="Nombre del usuario" required>
+                </div>
+                <div class="mb-3">
+                    <label for="userUsernameInput" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="userUsernameInput" placeholder="Username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="userEmailInput" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="userEmailInput" placeholder="Email del usuario" required>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="button" id="clearForm" class="btn btn-secondary">Limpiar</button>
+                    <button type="submit" class="btn btn-primary">Enviar (Fetch)</button>
+                    
+                    <button type="button" id="submitAsync" class="btn btn-success">Enviar (Async/Await)</button>
+                    <button type="button" id="submitFormData" class="btn btn-warning">Enviar (FormData)</button>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="app_full.js"></script>
+    <script src="../../../assets/librerias/sweetalert2.all.min.js"></script>
+    <script src="../../../assets/librerias/fontawesome/js/all.min.js"></script>
+
+</body>
+</html>

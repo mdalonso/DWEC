@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../assets/librerias/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/librerias/fontawesome/css/fontawesome.min.css">
+</head>
+<body>
+
+    <section>
+        <div class="container">
+            <div class="text-center mb-3">
+                <label for="userId" class="form-label">Ingrese ID de usuario:</label>
+                <input id="userId" class="form-control w-25 mx-auto" placeholder="ID del usuario">
+            </div>
+
+            <div class="text-center">
+                <button type="button" id="getUserFetch" class="btn btn-success">
+                    <i class="fa-solid fa-user"></i> Mostrar usuario (Fetch)
+                </button>
+                <button type="button" id="getUserAsync" class="btn btn-success">
+                    <i class="fa-solid fa-user"></i> Mostrar usuario (Async/Await)
+                </button>
+            </div>
+
+            <div class="table-responsive mt-4">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Usuario</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se insertarán los usuarios -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="app_full.js"></script>
+    <script src="../../../assets/librerias/sweetalert2.all.min.js"></script>
+    <script src="../../../assets/librerias/fontawesome/js/all.min.js"></script>
+</body>
+</html>

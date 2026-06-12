@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Usuario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../assets/librerias/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/librerias/fontawesome/css/fontawesome.min.css">
+</head>
+<body>
+
+    <section>
+        <div class="container">
+            <h3>CliniCan</h3>
+            <form id="userForm">
+                <div class="mb-3">
+                    <label for="chipInput" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="chipInput" placeholder="Chip" required>
+                </div>
+                <div class="mb-3">
+                    <label for="dogNameInput" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="dogNameInput" placeholder="Nombre del perro" required>
+                </div>
+                <div class="mb-3">
+                    <label for="dogRazaInput" class="form-label">Raza</label>
+                    <input type="text" class="form-control" id="dogRazaInput" placeholder="Raza del perro" required>
+                </div>
+                <div class="mb-3">
+                    <label for="dogDateInput" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="dogDateInput" placeholder="Fecha de Nacimiento" required>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="button" id="clearForm" class="btn btn-secondary">Limpiar</button>
+                    <button type="submit" class="btn btn-primary">Enviar (Fetch)</button>
+                    
+                    <button type="button" id="submitAsync" class="btn btn-success">Enviar (Async/Await)</button>
+                    <button type="button" id="submitFormData" class="btn btn-warning">Enviar (FormData)</button>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="app.js"></script>
+    <script src="../../../assets/librerias/sweetalert2.all.min.js"></script>
+    <script src="../../../assets/librerias/fontawesome/js/all.min.js"></script>
+
+</body>
+</html>

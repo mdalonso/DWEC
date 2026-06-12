@@ -1,0 +1,58 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    max-width: 100%;
+}
+
+.btn {
+    width: 48%;
+}
+
+.d-flex {
+    justify-content: space-between;
+}
+
+.btn-secondary {
+    width: 48%;
+}
+.d-flex button {
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
+.d-flex button:last-child {
+    margin-right: 0; /* El último botón no tiene margen a la derecha */
+}
