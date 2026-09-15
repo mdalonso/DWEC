@@ -2,7 +2,7 @@
 //declarar variables y constantes globales
 let numero,total = 1;
 
-//bucle for
+//bucle for básico
 for (let index = 0; index < 20; index++) {
   console.log(`El número es ${index}`);
 }
