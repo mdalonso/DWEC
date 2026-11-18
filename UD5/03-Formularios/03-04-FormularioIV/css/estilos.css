@@ -1,0 +1,137 @@
+/* ==========================================================
+   Validación nativa: estilos con pseudoclases de validación
+   ========================================================== */
+
+:root {
+  --fondo: #f5f6f9;
+  --tarjeta: #ffffff;
+  --texto: #1b2030;
+  --suave: #586075;
+  --borde: #cfd5e1;
+  --principal: #2753c9;
+  --error: #b8322a;
+  --error-fondo: #fbe9e7;
+  --ok: #1b7443;
+  --radio: 8px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.contenedor {
+  max-width: 620px;
+  margin: 32px auto;
+  padding: 28px 24px;
+  background: var(--tarjeta);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 { margin: 0 0 6px; font-size: 1.7rem; }
+h2 { font-size: 1.2rem; margin-top: 32px; }
+.intro { margin: 0 0 24px; color: var(--suave); }
+
+form { display: grid; gap: 18px; }
+
+.campo { display: grid; gap: 4px; }
+.campo > label, legend { font-weight: bold; }
+fieldset { border: 0; margin: 0; padding: 0; }
+small { color: var(--suave); }
+
+.opcion { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+
+input:not([type="radio"]):not([type="checkbox"]),
+select {
+  width: 100%;
+  padding: 9px 11px;
+  font: inherit;
+  border: 2px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--tarjeta);
+  color: var(--texto);
+}
+
+input:focus-visible, select:focus-visible, button:focus-visible {
+  outline: 3px solid var(--principal);
+  outline-offset: 2px;
+}
+
+/* ---------- PSEUDOCLASES DE VALIDACIÓN ---------- */
+
+/* :required marca los campos obligatorios (aquí, una línea a la izquierda) */
+input:required:not([type="radio"]):not([type="checkbox"]),
+select:required {
+  border-left-width: 6px;
+}
+
+/* :invalid se aplica DESDE QUE CARGA la página: todos los obligatorios vacíos
+   saldrían en rojo antes de escribir nada. Por eso NO lo usamos para el rojo. */
+
+/* :user-invalid solo se activa cuando el usuario ya ha interactuado con el campo
+   (lo ha cambiado y salido de él) o ha intentado enviar el formulario */
+input:user-invalid,
+select:user-invalid {
+  border-color: var(--error);
+  background: var(--error-fondo);
+}
+
+/* :user-valid es su pareja: campo correcto tras interactuar */
+input:user-valid:not([type="radio"]):not([type="checkbox"]),
+select:user-valid {
+  border-color: var(--ok);
+}
+
+/* Las casillas y radios no tienen borde propio: coloreamos la etiqueta */
+.opcion:has(input:user-invalid) { color: var(--error); font-weight: bold; }
+
+/* :placeholder-shown: el campo muestra el placeholder (está vacío) */
+input:placeholder-shown { font-style: italic; }
+
+/* :in-range / :out-of-range: para number y date con min/max */
+input:out-of-range { border-color: var(--error); }
+
+/* Mensaje de la comprobación propia (contraseñas) */
+.msg-error { margin: 0; color: var(--error); font-weight: bold; }
+.msg-error:empty { display: none; }
+
+/* ---------- Botones ---------- */
+.botones { display: flex; flex-wrap: wrap; gap: 10px; }
+
+button {
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: bold;
+  border: 2px solid var(--principal);
+  border-radius: var(--radio);
+  background: var(--principal);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button.secundario { background: transparent; color: var(--principal); }
+
+/* ---------- Registro de eventos ---------- */
+.registro {
+  margin: 0;
+  padding: 12px 12px 12px 36px;
+  min-height: 3em;
+  background: #151b27;
+  color: #e2e7f1;
+  border-radius: var(--radio);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+.registro .malo { color: #ff8a80; }
+.registro .bueno { color: #7ee2a8; }
+
+@media (max-width: 600px) {
+  .contenedor { margin: 0; border-radius: 0; box-shadow: none; }
+}
