@@ -1,0 +1,119 @@
+/* ---------------------------------------------------
+   ESTILOS GENERALES
+--------------------------------------------------- */
+
+:root {
+    --color-primario: #4a90e2;
+    --color-secundario: #2d3e50;
+    --color-fondo: #f5f7fa;
+    --color-error: #d9534f;
+    --color-borde: #cccccc;
+    --radio: 6px;
+    --transicion: 0.25s ease-in-out;
+    --fuente-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-base);
+    background: var(--color-fondo);
+    margin: 0;
+    padding: 2rem;
+    color: var(--color-secundario);
+}
+
+/* ---------------------------------------------------
+   CONTENEDOR DEL FORMULARIO
+--------------------------------------------------- */
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radio);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 2rem;
+}
+
+/* ---------------------------------------------------
+   CAMPOS DEL FORMULARIO
+--------------------------------------------------- */
+
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+.campo label,
+.campo p {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+/* INPUTS Y SELECT */
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    font-size: 1rem;
+    transition: var(--transicion);
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 5px rgba(74,144,226,0.4);
+}
+
+/* RADIOS Y CHECKBOXES */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.3rem;
+    transform: scale(1.2);
+}
+
+/* BOTÓN DE ENVÍO */
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--color-primario);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: var(--radio);
+    cursor: pointer;
+    transition: background var(--transicion);
+}
+
+button[type="submit"]:hover {
+    background-color: #3b7cc3;
+}
+
+/* ---------------------------------------------------
+   ERRORES (estilos originales ampliados)
+--------------------------------------------------- */
+
+span.error {
+    color: var(--color-error);
+    font-size: 0.9rem;
+    display: block;
+    height: 1rem;
+    margin-top: 0.2rem;
+}
+
+input:invalid,
+select:invalid {
+    border-color: var(--color-error);
+}
