@@ -1,0 +1,31 @@
+ body {
+      font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.5;
+      color: #1b2030;
+    }
+    form {
+      display: grid;
+      gap: 14px;
+      padding: 20px;
+      border: 1px solid #cfd5e1;
+      border-radius: 10px;
+    }
+    .campo { display: grid; gap: 4px; }
+    .campo > label { font-weight: bold; }
+    input[type="text"] { padding: 7px; font: inherit; max-width: 320px; }
+    /* Aspecto de un campo deshabilitado */
+    input:disabled { background: #eceff4; color: #8d98ad; cursor: not-allowed; }
+    label:has(+ input:disabled) { color: #8d98ad; }
+    .botones { display: flex; gap: 10px; }
+    button { padding: 8px 16px; font: inherit; cursor: pointer; justify-self: start; }
+    pre {
+      background: #151b27;
+      color: #e2e7f1;
+      padding: 16px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
