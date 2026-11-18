@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propiedades de los controles</title>
+  <link rel="stylesheet" href="./css/estilos.css" />
+  
+</head>
+<body>
+  <h1>Propiedades de los controles</h1>
+  <p>Rellena el formulario y pulsa <strong>Leer valores</strong>. Después prueba <strong>Escribir valores</strong> para ver cómo JavaScript modifica los controles. El resultado también aparece en la consola (F12).</p>
+
+  <form name="inscripcion">
+    <div class="campo">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre">
+    </div>
+
+    <div class="campo">
+      <label for="edad">Edad</label>
+      <input type="number" id="edad" name="edad" min="16" max="99">
+    </div>
+
+    <fieldset>
+      <legend>Turno</legend>
+      <div class="opciones">
+        <label><input type="radio" name="turno" value="mañana"> Mañana</label>
+        <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Lenguajes que conoces</legend>
+      <div class="opciones">
+        <label><input type="checkbox" name="lenguajes" value="js"> JavaScript</label>
+        <label><input type="checkbox" name="lenguajes" value="php"> PHP</label>
+        <label><input type="checkbox" name="lenguajes" value="java"> Java</label>
+      </div>
+    </fieldset>
+
+    <div class="campo">
+      <label for="ciclo">Ciclo</label>
+      <select id="ciclo" name="ciclo">
+        <option value="">Elige un ciclo…</option>
+        <option value="DAW">Desarrollo de Aplicaciones Web</option>
+        <option value="DAM">Desarrollo de Aplicaciones Multiplataforma</option>
+        <option value="ASIR">Administración de Sistemas Informáticos en Red</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="modulos">Módulos (Ctrl + clic para elegir varios)</label>
+      <select id="modulos" name="modulos" multiple size="4">
+        <option value="DWEC">Desarrollo Web en Entorno Cliente</option>
+        <option value="DWES">Desarrollo Web en Entorno Servidor</option>
+        <option value="DAW">Despliegue de Aplicaciones Web</option>
+        <option value="DIW">Diseño de Interfaces Web</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="foto">Foto</label>
+      <input type="file" id="foto" name="foto" accept="image/*">
+    </div>
+
+    <label><input type="checkbox" id="acepto" name="acepto"> Acepto las condiciones</label>
+
+    <div class="botones">
+      <button type="button" id="leer">Leer valores</button>
+      <button type="button" id="escribir">Escribir valores</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+  <h2>Resultado</h2>
+  <pre id="salida">Pulsa «Leer valores».</pre>
+
+ <script src="./js/app.js"></script>
+  <noscript>El navegador no soporta JavaScript</noscript>
+</body>
+</html>
